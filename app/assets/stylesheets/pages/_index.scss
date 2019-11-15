@@ -1,2 +1,9 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
+@import "form";
+
+
+.content-without-banner {
+  height: calc(100vh - 72px);
+}

@@ -1,5 +1,7 @@
-<h1>Fancy Cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-<p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-<% end %>
-<%= link_to 'Add a new cocktail', new_cocktail_path %>
+<%= render "components/banner" %>
+
+<div class="cocktail-container container mt-3 mb-4" id="list-cocktail">
+  <div class="row justify-content-around">
+    <%= render "components/card" %>
+  </div>
+</div>

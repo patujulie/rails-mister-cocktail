@@ -1,0 +1,9 @@
+<% @cocktails.each do |cocktail| %>
+  <div class="card-trip col-4">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <h2><%= cocktail.name %></h2>
+    <div class="card-trip-infos">
+      <%= link_to "See more", cocktail_path(cocktail), class: "btn btn-ghost card-button" %>
+    </div>
+  </div>
+<% end %>

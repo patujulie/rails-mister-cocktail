@@ -1,5 +1,10 @@
 
-<%= simple_form_for (@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit "create" %>
-<% end %>
+<div class="container-form my-4 mx-4">
+  <h2 class="my-4"> Add <strong>YOUR</strong> cocktail </h2>
+  <div class="form">
+    <%= simple_form_for (@cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "create" %>
+    <% end %>
+  </div>
+</div>

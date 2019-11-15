@@ -1,10 +1,18 @@
 
-<h2><%= @cocktail.name %></h2>
-
-<% @cocktail.doses.each do |dose| %>
-<%= dose.description %>
-<%= dose.ingredient.name %>
-<%= link_to "delete", dose_path(dose), method: :delete%>
-<% end %>
-
-<%= link_to "Create a dose", new_cocktail_dose_path(@cocktail) %>
+<div class="content-whithout-banner d-flex justify-content-around py-4">
+  <div class="picture" style="width: 70%;" >
+    <%= image_tag("mojito.jpg")%>
+  </div>
+  <div class="cocktails-info" style="width: 30%;">
+    <h2 class="my-4 mx-4"><%= @cocktail.name %></h2>
+    <% @cocktail.doses.each do |dose| %>
+      <div class="description d-flex justify-content-around my-4 mx-4"><p><%= dose.description %></p></div>
+      <p><%= dose.ingredient.name %></p>
+      <div class="buttons d-flex justify-content-around py-4 my-4 mx-4">
+        <%= link_to "delete", dose_path(dose), method: :delete, class: "btn btn-ghost"%>
+        <i class="fas fa-heart"></i>
+      </div>
+    <% end %>
+  <%= link_to "Create a dose", new_cocktail_dose_path(@cocktail) %>
+  </div>
+</div>
